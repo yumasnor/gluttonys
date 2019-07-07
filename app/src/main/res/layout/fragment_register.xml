@@ -3,12 +3,137 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Register">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.Register">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo2"
+        android:contentDescription="TODO" />
+
+        <EditText
+            android:id="@+id/etFirstname"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="#11000000"
+            android:ems="10"
+            android:drawableLeft="@drawable/ic_action_user"
+            android:hint="First Name"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:id="@+id/etLastname"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/etFirstname"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="#11000000"
+            android:ems="10"
+            android:drawableLeft="@drawable/ic_action_user"
+            android:hint="Last Name"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:id="@+id/etEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/etLastname"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="#11000000"
+            android:ems="10"
+            android:drawableLeft="@drawable/ic_action_user"
+            android:hint="Email"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:id="@+id/etUser"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/etEmail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="#11000000"
+            android:ems="10"
+            android:drawableLeft="@drawable/ic_action_user"
+            android:hint="Username"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:id="@+id/etPass"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/etUser"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="#11000000"
+            android:ems="10"
+            android:drawableLeft="@drawable/ic_action_user"
+            android:hint="Password"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:id="@+id/etAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/etPass"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="#11000000"
+            android:ems="10"
+            android:drawableLeft="@drawable/ic_action_user"
+            android:hint="Address"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:id="@+id/etAge"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/etAddress"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="#11000000"
+            android:ems="10"
+            android:drawableLeft="@drawable/ic_action_user"
+            android:hint="Age"
+            android:textSize="16dp"/>
+
+         <android.support.v7.widget.CardView
+            android:id="@+id/reg_card"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/etAge"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            app:cardBackgroundColor="#FFD300"
+            app:cardCornerRadius="25dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:background="#FFD300"
+                android:text="Register"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:layout_centerInParent="true"
+                />
+        </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
 </FrameLayout>

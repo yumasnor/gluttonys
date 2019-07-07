@@ -3,12 +3,94 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Login">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.Login">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="150dp"
+        android:layout_marginTop="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo2"
+        android:contentDescription="TODO" />
+
+    <EditText
+        android:id="@+id/etUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:drawableLeft="@drawable/ic_action_user"
+        android:hint="Username"
+        android:textSize="16dp"/>
+
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_below="@+id/etUsername"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="#11000000"
+        android:ems="10"
+        android:hint="Password "
+        android:inputType="textPassword"
+        android:drawableLeft="@drawable/ic_action_password"
+        android:layout_alignLeft="@id/etUsername"
+        android:layout_alignStart="@id/etUsername"/>
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/Cardview"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/etPassword"
+        android:layout_centerHorizontal="true"
+        app:cardBackgroundColor="#FFD300"
+        app:cardCornerRadius="25dp"
+        android:elevation="10dp"
+        android:layout_marginTop="60dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/btnLogin"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:background="#FFD300"
+                android:text="Login"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:textColor="#fff"
+                android:layout_centerInParent="true"
+                />
+
+
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register Here!"
+        android:layout_below="@id/Cardview"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"/>
+
+    </RelativeLayout>
+
 
 </FrameLayout>
