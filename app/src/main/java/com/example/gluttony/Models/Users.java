@@ -1,62 +1,92 @@
 package com.example.gluttony.Models;
 
 public class Users {
- private String userFname,userLname,phn_number,email,username,password;
+ private String Fname;
+    private String Lname;
+    private String Email;
+    private String Username;
+    private String Password;
+    private String Address;
+    private String Age;
+    private String Usertype;
 
-    public Users(String userFname, String userLname, String phn_number, String email, String username, String password) {
-        this.userFname = userFname;
-        this.userLname = userLname;
-        this.phn_number = phn_number;
-        this.email = email;
-        this.username = username;
-        this.password = password;
+    public Users(String fname, String lname, String email, String username, String password, String address, String age, String usertype) {
+        Fname = fname;
+        Lname = lname;
+        Email = email;
+        Username = username;
+        Password = password;
+        Address = address;
+        Age = age;
+        Usertype = usertype;
+
     }
 
-    public String getUserFname() {
-        return userFname;
+
+    public String getUsertype() {
+        return Usertype;
     }
 
-    public void setUserFname(String userFname) {
-        this.userFname = userFname;
+    public void setUsertype(String usertype) {
+        Usertype = usertype;
     }
 
-    public String getUserLname() {
-        return userLname;
+
+    public String getFname() {
+        return Fname;
     }
 
-    public void setUserLname(String userLname) {
-        this.userLname = userLname;
+    public void setFname(String fname) {
+        Fname = fname;
     }
 
-    public String getPhn_number() {
-        return phn_number;
+    public String getLname() {
+        return Lname;
     }
 
-    public void setPhn_number(String phn_number) {
-        this.phn_number = phn_number;
+    public void setLname(String lname) {
+        Lname = lname;
     }
 
     public String getEmail() {
-        return email;
+        return Email;
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        Email = email;
     }
 
     public String getUsername() {
-        return username;
+        return Username;
     }
 
     public void setUsername(String username) {
-        this.username = username;
+        Username = username;
     }
 
     public String getPassword() {
-        return password;
+        return Password;
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        Password = password;
     }
+
+    public String getAddress() {
+        return Address;
+    }
+
+    public void setAddress(String address) {
+        Address = address;
+    }
+
+    public String getAge() {
+        return Age;
+    }
+
+    public void setAge(String age) {
+        Age = age;
+    }
+
+
 }

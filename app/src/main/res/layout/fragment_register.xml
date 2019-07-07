@@ -10,20 +10,11 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:src="@drawable/logo2"
-        android:contentDescription="TODO" />
 
         <EditText
             android:id="@+id/etFirstname"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_below="@+id/imageView"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="30dp"
             android:background="#11000000"

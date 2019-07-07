@@ -1,14 +1,22 @@
 package com.example.gluttony.Models;
 
 public class Token_Generate {
-    private String  token, username,userid;
+    private String  token, user,_id;
 
-    public String getUserid() {
-        return userid;
+    public String get_id() {
+        return _id;
     }
 
-    public void setUserid(String userid) {
-        this.userid = userid;
+    public String getUser() {
+        return user;
+    }
+
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    public void set_id(String _id) {
+        this._id = _id;
     }
 
     public String getToken() {
@@ -17,13 +25,5 @@ public class Token_Generate {
 
     public void setToken(String token) {
         this.token = token;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 }

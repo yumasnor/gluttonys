@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.gluttony.API.User_API;
 import com.example.gluttony.Dashboard.Dashboard;
@@ -71,19 +72,17 @@ Button btn_login;
                 SharedPreferences preferences=getActivity().getSharedPreferences("storetoken",0);
                 SharedPreferences.Editor edit=preferences.edit();
                 edit.putString("token",token_generate.getToken());
-                edit.putString("userid",token_generate.getUserid());
-                edit.putString("username",token_generate.getUsername());
+                edit.putString("userid",token_generate.get_id());
+                edit.putString("username",token_generate.getUser());
                 edit.commit();
                 Intent intent= new Intent(getActivity(), Dashboard.class);
                 startActivity(intent);
-
-
-
 
             }
 
             @Override
             public void onFailure(Call<Token_Generate> call, Throwable t) {
+                Toast.makeText(getContext(), "Error"+t.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
 
             }
         });
