@@ -7,7 +7,7 @@ import android.os.Bundle;
 
 import com.example.gluttony.Fragments.Login;
 import com.example.gluttony.Fragments.Register;
-import com.example.gluttony.ViewpageAdapter.ViewpageAdapter;
+import com.example.gluttony.Adapters.ViewpageAdapter;
 
 public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;

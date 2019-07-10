@@ -1,5 +1,6 @@
 package com.example.gluttony.Dashboard;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,6 +11,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.gluttony.R;
+import com.example.gluttony.User_Activities.About_Us;
+import com.example.gluttony.User_Activities.Restaurant_list;
+import com.example.gluttony.User_Activities.User_Update;
 
 public class Dashboard extends AppCompatActivity implements View.OnClickListener {
 TextView et_rest, et_update, et_aboutus, et_log_out;
@@ -43,7 +47,18 @@ TextView et_rest, et_update, et_aboutus, et_log_out;
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.et_view_restaurant:
+                startActivity(new  Intent(this, Restaurant_list.class));
+            break;
+
+            case R.id.et_update_profile:
+                startActivity(new Intent(this, User_Update.class));
+            break;
+
+            case R.id.et_about_us:
+                startActivity(new Intent(this, About_Us.class));
+            break;
 
         }
+
     }
 }

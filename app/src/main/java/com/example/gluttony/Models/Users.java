@@ -40,6 +40,7 @@ public class Users {
         Fname = fname;
     }
 
+
     public String getLname() {
         return Lname;
     }
@@ -47,6 +48,7 @@ public class Users {
     public void setLname(String lname) {
         Lname = lname;
     }
+
 
     public String getEmail() {
         return Email;
@@ -56,6 +58,7 @@ public class Users {
         Email = email;
     }
 
+
     public String getUsername() {
         return Username;
     }
@@ -63,6 +66,7 @@ public class Users {
     public void setUsername(String username) {
         Username = username;
     }
+
 
     public String getPassword() {
         return Password;
@@ -72,6 +76,7 @@ public class Users {
         Password = password;
     }
 
+
     public String getAddress() {
         return Address;
     }
@@ -79,6 +84,7 @@ public class Users {
     public void setAddress(String address) {
         Address = address;
     }
+
 
     public String getAge() {
         return Age;

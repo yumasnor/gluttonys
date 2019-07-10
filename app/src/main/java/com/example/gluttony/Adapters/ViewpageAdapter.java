@@ -1,4 +1,4 @@
-package com.example.gluttony.ViewpageAdapter;
+package com.example.gluttony.Adapters;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

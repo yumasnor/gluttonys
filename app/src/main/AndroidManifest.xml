@@ -4,6 +4,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
 
     <application
         android:allowBackup="true"
@@ -13,10 +16,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".User_Activities.About_Us"></activity>
+        <activity android:name=".User_Activities.Restaurant_info"></activity>
+        <activity android:name=".User_Activities.About_Us" />
         <activity android:name=".User_Activities.User_Update" />
         <activity android:name=".User_Activities.Restaurant_list" />
-        <activity android:name=".loginSignup" />
         <activity android:name=".Dashboard.Dashboard" />
         <activity android:name=".MainActivity" />
         <activity android:name=".SplashScreen">
