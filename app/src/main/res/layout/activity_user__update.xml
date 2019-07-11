@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".User_Activities.User_Update">
+
+
+        <!--<ImageView-->
+            <!--android:id="@+id/img_logo"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="150dp"-->
+            <!--android:src="@drawable/logo2"/>-->
+
+        <EditText
+
+            android:id="@+id/etFname"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:background="#11000000"
+            android:ems="10"
+            android:drawableLeft="@drawable/ic_action_user"
+            android:hint="First Name"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:id="@+id/etLname"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/etFname"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="#11000000"
+            android:ems="10"
+            android:drawableLeft="@drawable/ic_action_user"
+            android:hint="Last Name"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:id="@+id/etE_mail"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/etLname"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="#11000000"
+            android:ems="10"
+            android:drawableLeft="@drawable/ic_action_user"
+            android:hint="Email"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:id="@+id/etUser_name"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/etE_mail"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="#11000000"
+            android:ems="10"
+            android:drawableLeft="@drawable/ic_action_user"
+            android:hint="Username"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:id="@+id/etPass_word"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/etUser_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="#11000000"
+            android:ems="10"
+            android:drawableLeft="@drawable/ic_action_user"
+            android:hint="Password"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:id="@+id/etAddress1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/etPass_word"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="#11000000"
+            android:ems="10"
+            android:drawableLeft="@drawable/ic_action_user"
+            android:hint="Address"
+            android:textSize="16dp"/>
+
+        <EditText
+            android:id="@+id/etAge1"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@+id/etAddress1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="#11000000"
+            android:ems="10"
+            android:drawableLeft="@drawable/ic_action_user"
+            android:hint="Age"
+            android:textSize="16dp"/>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/update_card"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/etAge1"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            app:cardBackgroundColor="#FFD300"
+            app:cardCornerRadius="25dp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:id="@+id/btnUpdate"
+                    android:layout_width="250dp"
+                    android:layout_height="50dp"
+                    android:background="#FFD300"
+                    android:text="Update Profile"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#fff"
+                    android:layout_centerInParent="true"
+                    />
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+    </RelativeLayout>
+

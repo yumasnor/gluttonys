@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".User_Activities.About_Us">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:src="@drawable/logo"
+        android:id="@+id/logo"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/name"
+        android:layout_below="@id/logo"
+        android:text="GLUTTONY'S"
+        android:textAlignment="center"
+        android:textSize="40sp"/>
+    <TextView
+
+        android:paddingTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/about"
+        android:layout_below="@+id/name"
+        android:text="Nowadays there is no need for booking to eat in a restaurant. Many restaurants have been opened in the past years. But people get confused to find the location once they head out. There are one after another restaurant opened side by side. Gluttony’s help people to find the restaurant they want to eat in.
+There is just that time when you are hungry and want to take a quick bite but you are not familiar with the place your in so you just decide to go home and eat. Now with Gluttony’s you don’t have to do that. Just open your cell phone and connect to your GPS then find the  restaurant you want to in. No more holdbacks for food.
+"/>
+    <TextView
+        android:paddingTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/about"
+        android:id="@+id/about2"
+        android:text="Food hunt is one of a trend these days thanks to social marketing and advertisements. So there are obviously promotion pages available for the act. So to compete with the previous successful applications is definitely going to be difficult. But in context of Nepal, there are very less applications available in this sector. So the main competition is going to be with media pages. There are various famous instagram pages available for food hunts but they do not present the users with real time locations which makes the users difficult the place they want to eat. With the application I created, the problem will be solved."/>
+
+</RelativeLayout>
