@@ -66,6 +66,13 @@
         mapbox:mapbox_cameraTargetLat="27.700769"
         mapbox:mapbox_cameraTargetLng="85.300140"
         mapbox:mapbox_cameraZoom="11" />
+
+
+     <android.support.v7.widget.RecyclerView
+         android:layout_below="@+id/map"
+         android:layout_width="match_parent"
+         android:layout_height="400dp"
+         android:id="@+id/comment_recycler"/>
     </RelativeLayout>
 
 </ScrollView>

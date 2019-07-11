@@ -8,6 +8,15 @@ public class Restaurants {
     private String Restaurantcontact;
     private String Longitude;
     private String Latitude;
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public String getRestaurantlogo() {
         return Restaurantlogo;

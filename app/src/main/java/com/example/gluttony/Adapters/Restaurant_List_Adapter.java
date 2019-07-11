@@ -63,6 +63,7 @@ public class Restaurant_List_Adapter extends RecyclerView.Adapter<Restaurant_Lis
                intent.putExtra("Restaurantdesc", restaurants.getRestaurantdesc());
                intent.putExtra("Latitude", restaurants.getLatitude());
                intent.putExtra("Longitude", restaurants.getLongitude());
+               intent.putExtra("id",restaurants.getId());
                Log=restaurants.getLongitude();
                Lat=restaurants.getLatitude();
                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);

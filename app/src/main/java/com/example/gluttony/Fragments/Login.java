@@ -1,14 +1,22 @@
 package com.example.gluttony.Fragments;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.StrictMode;
+import android.os.Vibrator;
 import android.support.v4.app.Fragment;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -24,7 +32,7 @@ import com.example.gluttony.Retro_API.API;
 public class Login extends Fragment implements View.OnClickListener {
     EditText etuname, etpass;
     Button btn_login;
-
+    SensorManager sensorManager;
 
     public Login() {
         // Required empty public constructor
@@ -49,11 +57,15 @@ public class Login extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btnLogin:
-
-                Logincheck();
+                if (validation()) {
+                    Logincheck();
+                }
                 break;
+                }
+
+
         }
-    }
+
 
     private void Logincheck() {
         User_API user_api = API.createinstance().create(User_API.class);
@@ -74,6 +86,66 @@ public class Login extends Fragment implements View.OnClickListener {
             startActivity(intent);
         } else {
             Toast.makeText(getActivity(), "Login Failed...", Toast.LENGTH_SHORT).show();
+
+
         }
+
+
     }
+    public boolean validation(){
+        if (TextUtils.isEmpty(etuname.getText().toString())){
+            etuname.setError("Enter Username");
+            etuname.requestFocus();
+
+            Vibrator vibrator = (Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
+            vibrator.vibrate (2000);
+            return false;
+
+        }
+        else if(TextUtils.isEmpty(etpass.getText().toString())){
+            etpass.setError("Enter Password");
+            etpass.requestFocus();
+
+            Vibrator vibrator =(Vibrator) getActivity().getSystemService(Context.VIBRATOR_SERVICE);
+            vibrator.vibrate(2000);
+            return false;
+        }
+        return true;
+
+    }
+
+    public void proximity() {
+        sensorManager = (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
+        Sensor sensor = sensorManager.getDefaultSensor(Sensor.TYPE_PROXIMITY);
+
+        if (sensor == null) {
+            Toast.makeText(getActivity(), "No sensor detected", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(getActivity(), "Sensor Kicking in...", Toast.LENGTH_SHORT).show();
+        }
+        SensorEventListener proximityListener = new SensorEventListener() {
+            @Override
+            public void onSensorChanged(SensorEvent event) {
+                WindowManager.LayoutParams params = getActivity().getWindow().getAttributes();
+                if (event.sensor.getType() == Sensor.TYPE_PROXIMITY) {
+                    if (event.values[0] == 0) {
+                        params.flags = WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
+                        params.screenBrightness = 0;
+                        getActivity().getWindow().setAttributes(params);
+                    } else {
+                        params.flags = WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON;
+                        params.screenBrightness = -1f;
+                        getActivity().getWindow().setAttributes(params);
+                    }
+                }
+            }
+
+            @Override
+            public void onAccuracyChanged(Sensor sensor, int accuracy) {
+
+            }
+        };
+        sensorManager.registerListener(proximityListener, sensor, SensorManager.SENSOR_DELAY_FASTEST);
+    }
+
 }

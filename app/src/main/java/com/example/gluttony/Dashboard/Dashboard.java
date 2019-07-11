@@ -2,6 +2,7 @@ package com.example.gluttony.Dashboard;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.hardware.SensorManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -10,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.gluttony.MainActivity;
 import com.example.gluttony.R;
 import com.example.gluttony.User_Activities.About_Us;
 import com.example.gluttony.User_Activities.Restaurant_list;
@@ -17,6 +19,7 @@ import com.example.gluttony.User_Activities.User_Update;
 
 public class Dashboard extends AppCompatActivity implements View.OnClickListener {
 TextView et_rest, et_update, et_aboutus, et_log_out;
+
 
 
     @Override
@@ -58,7 +61,18 @@ TextView et_rest, et_update, et_aboutus, et_log_out;
                 startActivity(new Intent(this, About_Us.class));
             break;
 
+            case R.id.et_logout:
+                Intent intent = new Intent (Dashboard.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                Toast.makeText(getApplicationContext(), "Log Out Successful", Toast.LENGTH_SHORT).show();
+                finish();
+
         }
 
     }
+
+
 }
+
+

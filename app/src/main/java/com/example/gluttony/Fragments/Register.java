@@ -1,8 +1,12 @@
 package com.example.gluttony.Fragments;
 
 
+import android.app.Notification;
+import android.app.NotificationManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.NotificationManagerCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,10 +16,13 @@ import android.widget.Toast;
 
 import com.example.gluttony.API.User_API;
 import com.example.gluttony.Models.Users;
+import com.example.gluttony.Notification.Notification_Channel;
 import com.example.gluttony.R;
 import com.example.gluttony.Retro_API.API;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
+import java.nio.channels.Channel;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -28,6 +35,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * A simple {@link Fragment} subclass.
  */
 public class Register extends Fragment implements View.OnClickListener {
+    private NotificationManagerCompat notificationManagerCompat;
+
     EditText et_Fname,et_Lname,et_Email,et_Username,et_Password,et_Address,et_Age;
     Button btn_reg;
     User_API user_api;
@@ -40,6 +49,10 @@ public class Register extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        notificationManagerCompat = NotificationManagerCompat.from(getActivity());
+        Notification_Channel channel = new Notification_Channel(getActivity());
+        channel.notificationChannel();
+
 
         View view= inflater.inflate(R.layout.fragment_register, container, false);
         et_Fname = view.findViewById(R.id.etFirstname);
@@ -84,6 +97,7 @@ public class Register extends Fragment implements View.OnClickListener {
                 @Override
                 public void onResponse(Call<String> call, Response<String> response) {
                     Toast.makeText(getActivity(),"Success", Toast.LENGTH_LONG).show();
+                    DisplayNotification();
 
                 }
 
@@ -92,6 +106,18 @@ public class Register extends Fragment implements View.OnClickListener {
                     Toast.makeText(getActivity(),"Error"+t.getMessage(),Toast.LENGTH_LONG).show();
                     }
             });
+
         }
+    }
+
+    private void DisplayNotification(){
+        Notification notification = new NotificationCompat.Builder(getActivity(), Notification_Channel.Channel_1)
+            .setSmallIcon(R.drawable.ic_action_user)
+                .setContentTitle("Register Successful")
+                .setContentText("Registration Successful")
+                .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+                .build();
+        notificationManagerCompat.notify(1, notification);
+
     }
 }
