@@ -12,20 +12,26 @@ i.	To provide people with the benefit of finding restaurants and know about them
 2. To provide location of the restaurants.
 3. To introduce various restaurants around them.
 
-##Features
+## Features
 1. People can register in the application.
 2. People can login in the application.
 3. People are shown list of restaurants available.
 4. A location system is being used.
 5. People can view the description of the restaurants.
 
-##API link
+## API link
 
-##Youtube Link
+## Youtube Link
 
-## RESTLINK
+## REST Client
+Retrofit is a REST Client for Java and Android. It makes it relatively easy to retrieve and upload JSON (or other structured data) via a REST based webservice. In Retrofit you configure which converter is used for the data serialization.
+Easy to connect to web-services by translating the API into Java or Kotlin.
+Easy to add Headers and request types.
+Easily Customisable, you can customise it and add say any convertors like Gson, JackSon, Moshi, Prtobuf, XML etc. You can also customise it to add different interceptors and cache.
+It provides additional functionalities such as custom headers, file uploads, downloads, mocking responses (for testing).
 
-##Conclusion
+
+## Conclusion
 A successful project on Restaurant Finder has been created with Android Studio. The application will be able able to help people to find the restaurants. 
 The application also has a profiling system. A GPS mapping has also been used to track the restaurant. The user can also view information on the restaurants.
 
